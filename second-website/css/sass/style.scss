@@ -1,0 +1,40 @@
+@import 'normalize.scss',
+        'header',
+        'feature',
+        'team',
+        'testimonial',
+        'pricing',
+        'portfolio',
+        'contact-form',
+        'footer';
+
+*, *::before, *::after{
+  box-sizing: border-box;
+  outline: none;
+  font-family: 'Times New Roman', Times, serif
+}
+
+body{
+  height: 4000px;
+  color: #6f7b8a;
+}
+
+.container{
+  padding: 25px;
+}
+
+.is-show{
+  display: block !important;
+}
+
+.is-active{
+  background-color: #869791 !important;
+}
+
+@media (min-width: 768px){
+  .container{
+    max-width: 1170px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}

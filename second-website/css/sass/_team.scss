@@ -1,0 +1,160 @@
+.team h2{
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.team-img{
+  width: 200px;
+  margin: auto;
+  position: relative;margin-bottom: 40px;
+
+  & > img{
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  }
+
+  &::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: .0;
+  background-color: rgb(255, 255, 255);
+  z-index: 0;
+  transition: opacity .4s linear;
+  }
+  
+  &:hover::before{
+  opacity: .8;
+  }
+
+  &:hover .team-details{
+  opacity: 1;
+  }
+  
+  & .team-details{
+    transition: opacity .5s linear;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+
+    & h5{
+      margin: 0 0 5px;
+      color: #505458
+    }
+
+    & span{
+      margin: 7px 0;
+      display: inline-block;
+    }
+
+    & .socials{
+      & a{
+        text-decoration: none;
+        color: inherit;
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+        text-align: center;
+
+        & i{
+          color: #777;
+          font-size: 22px;
+          transition: color .4s linear;
+
+          &:hover{
+            color: #222
+          }
+        }
+      }
+    } 
+
+  }
+}
+
+@media (min-width: 768px){
+  .team .container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly
+  }
+  .team .container h2{
+    flex-basis: 100%;
+  }
+}
+
+
+/*
+team feature
+*/
+
+.team-feature-list{
+  margin: 0 0 15px
+}
+
+.team-feature-list h5{
+  margin: 0;
+}
+
+.team-feature-list h4{
+  margin-bottom: 0;
+}
+
+.team-feature-list .raing{
+  border-radius: 10px;
+  width: 80%;
+  height: 4px;
+  background-color: rgb(184, 184, 184);
+}
+
+.team-feature-list .raing span{
+  height: 100%;
+  background-color: rgb(34, 38, 46);
+  display: block;
+}
+
+.team-feature-list:nth-of-type(1) .raing span{
+  width: 90%
+}
+
+.team-feature-list:nth-of-type(2) .raing span{
+  width: 70%
+}
+.team-feature-list:nth-of-type(3) .raing span{
+  width: 60%
+}
+.team-feature-list:nth-of-type(4) .raing span{
+  width: 80%
+}
+
+@media (min-width: 768px){
+  .team-feature .container{
+    padding-top: 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .team-feature-list{
+    flex-basis: 48%;
+    margin: auto
+  }
+}
+
+@media (min-width: 998px){
+  .team-feature-list{
+    flex-basis: 23%;
+  }
+}

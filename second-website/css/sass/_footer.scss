@@ -1,0 +1,45 @@
+footer{
+  text-align: center;
+  background-color: #22262e;
+  color: #fff;
+  padding: 20px 0;
+
+  & h3{
+    margin-top: 0;
+  }
+
+  & h2{
+    font-size: 22px;
+
+    & span{
+      color: red
+    }
+  }
+
+  & div{
+
+    & h4 {
+      margin-bottom: 10px
+    }
+
+    & a{
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 12px;
+
+      & i{
+        font-size: 22px;
+        padding: 0;
+        color: rgb(79, 79, 79);
+        transition: color .4s linear;
+
+        &:hover{
+          color: #fff;
+        }
+      }
+    }
+  }
+  & > h4{
+    margin-bottom: 0;
+  }
+}

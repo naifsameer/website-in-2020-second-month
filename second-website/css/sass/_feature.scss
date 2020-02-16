@@ -1,0 +1,57 @@
+#feature h2{
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  color: #505458;
+  margin-bottom: 29px
+}
+
+.feature-list{
+  width: 80%;
+  margin: auto;
+
+  & .icon{
+    width: 70px;
+    margin: auto;
+
+    & img{
+    width: 100%;
+    }
+  }
+
+  & .title{
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    margin: 20px 0 0;
+    color: #505458
+  }
+
+  & p{
+    line-height: 1.5
+  }
+}
+/*
+media
+*/
+
+@media (min-width: 768px){
+  #feature {
+    & .container{
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      & h2{
+        flex-basis: 100%;
+      }
+    }
+  }
+    
+  .feature-list{
+    flex-basis: 31%;
+
+    & p{
+      width: 80%;
+      margin: 20px auto;
+    }
+  }
+}

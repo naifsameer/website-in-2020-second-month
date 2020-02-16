@@ -1,0 +1,247 @@
+header{
+  background-color: #333;
+  color: #ddd;
+  background-size: cover;
+  position: relative;
+  transition: background .4s linear;
+
+  &::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: #111;
+    opacity: .7
+  }
+
+  & > .container{
+    padding-top: 60px;
+    text-align: center;
+    min-height: 80vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+  }
+
+  & nav{
+    position: fixed;
+    z-index: 80;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #222;
+    
+    & .container{
+      padding: 12px 20px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
+
+header .nav-berger{
+  width: 28px;
+}
+
+header .nav-berger div{
+  height: 4px;
+  background-color: #ddd;
+  margin-bottom: 4px
+}
+
+header .nav-link{
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 230px;
+  height: 100%;
+  background-color: #111;}
+  
+header .nav-show-animation{
+  animation: show-nav .6s linear forwards;
+}
+
+header .nav-hide-animation{
+  animation: hide-nav .6s linear forwards;
+}
+
+header .nav-link button{
+  position: relative;
+  top: 13px;
+  left: 35%;
+  border-radius: 50px;
+  height: 25px;
+  width: 25px;
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: bolder;
+  color: inherit;
+  background-color: #111;
+  border: 2px solid 
+}
+
+header .nav-link ul{
+  list-style: none;
+  margin: 0;
+  margin-top: 15px;
+  padding: 0;
+}
+
+header .nav-link ul li a{
+  text-decoration: none;
+  color: inherit;
+  width: 100%;
+  display: inline-block;
+  padding: 28px;
+}
+
+header ul li a:hover{
+  background-color: red
+}
+
+/*
+animation for nav bar;
+*/
+@keyframes show-nav{
+  0%{
+    right: -300px;
+  }
+  100%{
+    right: 0;
+  }
+}
+
+@keyframes hide-nav{
+  0%{
+    right: 0;
+  }
+  100%{
+    right: -300px
+  }
+}
+
+/*
+media query
+*/
+
+@media (min-width: 768px){
+  header .nav-berger,
+  header .nav-link button{
+    display: none !important;
+  }
+  header nav{
+    display: flex;
+    justify-content: space-between;
+  }
+  header nav .container{
+    padding: 5px;
+  }
+  header nav .nav-logo{
+    padding: 10px;
+  }
+  header .nav-link{
+    display: block;
+    position: relative;
+    flex-basis: 70%;
+    background-color: inherit;
+    text-align: right;
+  }
+  header .nav-link ul{
+    margin: 0;
+  }
+  header .nav-link li{
+    display: inline-block;
+  }
+  header .nav-link ul li a{
+    padding: 10px;
+  }
+}
+
+
+
+/*
+header content
+*/
+
+.header-content-slider{
+  position: relative;
+  bottom: 20px;
+  width: 100%;
+
+  & .slider-btn{
+    opacity: 0;
+    transition: opacity .4s linear;
+    position: absolute;
+    top: 50%;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+    line-height: 40px;
+    padding: 0;
+    font-weight: 900;
+  }
+  
+  &:hover .slider-btn{
+    opacity: 1;
+  }
+
+  & button{
+    transition: all .3s linear;
+    color: rgba(246, 246, 255, 0.85);
+    background-color: #1f3853;
+    border: 1px solid #ddd;
+    
+    &:hover{
+      border-color: rgba(8, 2, 2, 0.774);
+      color: #fff;
+    }
+  }
+}
+
+.slider-btn-left{
+  left: 0;
+}
+
+.slider-btn-right{
+  right: 0;
+}
+
+.header-content-slider-item{
+  display: none;
+  
+  & h2{
+    font-size: 26px
+  }
+
+  & p{
+    font-size: 18px;
+  }
+
+  & button{
+    padding: 10px 14px;
+    border-radius: 10px;
+    position: relative;
+    top: 20px
+  }
+}
+
+/*
+media header content 
+*/
+
+@media (min-width: 1024px){
+  header{
+    height: 100vh
+  }
+  header .container{
+    height: 100%
+  }
+}
